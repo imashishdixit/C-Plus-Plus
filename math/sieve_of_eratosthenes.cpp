@@ -21,11 +21,11 @@ void sieve(int N)
 {
     isprime[0] = 0;
     isprime[1] = 0;
-    for (int i = 2; i <= N; i++)
+    for (int i = 2; i*i<= N; i++)
     {
         if (isprime[i])
         {
-            for (int j = i * 2; j <= N; j += i)
+            for (int j = i * i; j <= N; j += i)
             {
                 isprime[j] = 0;
             }
